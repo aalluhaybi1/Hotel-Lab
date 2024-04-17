@@ -1,180 +1,155 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>renfroe-hotel</title>
+  <title>Programming Club Registration</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<!-- Titlebar introducing page and reason for page -->
+  <!-- Titlebar introducing page and reason for page -->
 <div class="row">
   <div class="container-fluid">
-    <nav class="navbar navbar-expand-sm navbar-light text-white" style="background-color:#533A66">
+    <nav class="navbar navbar-expand-sm navbar-light text-white" style="background-color: rgba(170, 160, 178, 0.9);">
       
   <div class="offset-md-2 col-md-8 mx-auto text-center">
 
-      <h2><i class="bi bi-moon-stars"></i> The Astronomical Astronomy Club <i class="bi bi-moon-stars"></i></h2>
-      <h4>Welcome, Fellow Astrologist.</h4>
+      <h2>The Programming Club </h2>
+      <h4>Welcome, Fellow to Register.</h4>
       <h4>Thank You For Your Interest In Our Club!</h4>
     </nav>
     </div>
    </div>
   </div>
-<!-- Text area asking for the user's name and email -->
-<div class="card m-3 col-sm-6 text-left mx-auto bg-dark text-white">
-  <div class="card-header text-center">Personal Contact Information
-  </div>
+<div class="container-fluid">
+  <!-- Personal Information Section -->
+<div class="card m-3 col-sm-6 text-center mx-auto bg-dark text-white">
+  <div class="card-header text-center">Personal Information</div>
   <div class="card-body">
     <label for="name">Name:</label>
-    <input
-           type="text"
-           name="name"
-           id="name"
-           placeholder="Your Name Here"
-    />
-    <button type="button" class="btn btn-danger btn-sm" onclick="document.getElementById('name').value = ''">Clear</button>
-  <label for="email">Email:</label>
-    <input
-           type="text"
-           name="email"
-           id="email"
-           placeholder="starGazer123@gmail.com"
-    />
-    <button type="button" class="btn btn-danger btn-sm" onclick="document.getElementById('email').value = ''">Clear</button>
+    <input type="text" name="name" id="name" placeholder="Your Name Here" required minlength="2" maxlength="50">
+    <small class="text-muted">Please enter your name (2-50 characters).</small><br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" placeholder="Your Email Here" required>
+    <small class="text-muted">Please enter a valid email address.</small>
   </div>
 </div>
 
-<!-- Text area box asking for a username and password -->
-<div class="card m-3 col-sm-6 text-center mx-auto bg-dark text-white">
-  <div class="card-header">Please enter a username: </div>
-  <div class="card-body">
-        <label for="userName">USERNAME:</label>
-    <input
-           type="text"
-           name="userName"
-           id="userName"
-           placeholder="Ex. StarGazer123"
-    />
-      <button type="button" class="btn btn-danger btn-sm" onclick="document.getElementById('userName').value = ''">Clear</button>
-  </div>
-</div>
 
-<div class="card m-3 col-sm-6 text-center mx-auto bg-dark text-white">
-  <div class="card-header">Please enter a password: </div>
-  <div class="card-body">
-    <label for="password">PASSWORD:</label>
-    <input
-           type="text"
-           name="password"
-           id="password"
-           placeholder="*************"
-    />
-    <button type="button" class="btn btn-danger btn-sm" onclick="document.getElementById('password').value = ''">Clear</button>
-  </div>
-</div>
+  <!-- Username Section -->
+  <div class="card m-3 col-sm-6 text-center mx-auto bg-dark text-white" style="background-color: rgba(78, 67, 86, 0.9);">
 
-<!-- The Checkbox Section asks the user to check off their topics of interest-->
-<div class="card m-3 col-sm-6 text-left mx-auto bg-dark text-white">
-  <div class="card-header text-center">What are you interested in learning about?</div>
-  <div class="card-body">
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="darkMatter" name="darkMatter" value="darkMatter" checked>
-      <label class="form-check-label" for="darkMatter">Dark Matter</label>
+
+    <div class="card-header">Choose a Username</div>
+    <div class="card-body">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" placeholder="Your Username Here"/>
+      <button type="button" class="btn btn-success btn-sm">Check Availability</button>
+      <button type="button" class="btn btn-danger btn-sm" onclick="document.getElementById('username').value = ''">Clear</button>
     </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="planets" name="planets" value="planets">
-      <label class="form-check-label" for="planets">Planets</label>
-    </div>
-<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="blackHoles" name="blackHoles" value="blackHoles">
-      <label class="form-check-label" for="check2">Black Holes</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="stars" name="stars" value="stars">
-      <label class="form-check-label" for="stars">Staaarrrrsss</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="constel" name="constel" value="constel">
-      <label class="form-check-label" for="constel">Constellations</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="other" name="other" value="other">
-      <label class="form-check-label" for="other">Other</label>
-    </div><br>
   </div>
- </div>
-    
-<!-- Radio Buttons  -->
+
+  <!-- Password Section -->
+  <div class="card m-3 col-sm-6 text-center mx-auto bg-dark text-white">
+    <div class="card-header">Set a Password</div>
+    <div class="card-body">
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" placeholder="Your Password Here"/>
+      <button type="button" class="btn btn-danger btn-sm" onclick="document.getElementById('password').value = ''">Clear</button>
+    </div>
+  </div>
+
+  <!-- Interest Section -->
   <div class="card m-3 col-sm-6 text-left mx-auto bg-dark text-white">
-    <div class="card-header text-center">When is the best time for you to meet with the group?:</div>
-  <div class="card-body">
-    <h6>TIME:</h6>
-        <div class="form-check">
-  <input type="radio" class="form-check-input" id="mornings" name="mornings" value="mornings" checked>Mornings 
-  <label class="form-check-label" for="mornings"></label>
-</div>
-<div class="form-check">
-  <input type="radio" class="form-check-input" id="afternoons" name="afternoons" value="afternoons">Afternoons
-  <label class="form-check-label" for="afternoons"></label>
-</div>
-<div class="form-check">
-  <input type="radio" class="form-check-input" id="nights" name="nights" value="nights">Nights
-  <label class="form-check-label" for="nights"></label>
-</div>
-    <h6>DAYS:</h6>
-        <div class="form-check">
-  <input type="radio" class="form-check-input" id="tuesday" name="tuesday" value="tuesday" checked>Tuesdays 
-  <label class="form-check-label" for="tuesday"></label>
-</div>
-<div class="form-check">
-  <input type="radio" class="form-check-input" id="thursday" name="thursday" value="thursday">Thursdays
-  <label class="form-check-label" for="thursday"></label>
-</div>
-<div class="form-check">
-  <input type="radio" class="form-check-input" id="saturday" name="saturday" value="saturday">Saturdays
-  <label class="form-check-label" for="saturday"></label>
-</div>
+    <div class="card-header text-center">Programming Interests</div>
+    <div class="card-body">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="webDev" name="webDev" value="webDev" checked>
+        <label class="form-check-label" for="webDev">Web Development</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="appDev" name="appDev" value="appDev">
+        <label class="form-check-label" for="appDev">App Development</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="dataScience" name="dataScience" value="dataScience">
+        <label class="form-check-label" for="dataScience">Data Science</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="ai" name="ai" value="ai">
+        <label class="form-check-label" for="ai">Artificial Intelligence</label>
+      </div>
+    </div>
   </div>
-</div>
-  
-<!-- Dropdown list -->
-<div class="card m-3 col-sm-6 text-center mx-auto bg-dark text-white">
-  <div class="card-header">
-    <label for="sources">How did you hear about us?</label>
-  </div>
-  
-  <div class="card-body">
-<select name="sources" id="sources">
-  <option value="facebook">Facebook</option>
-  <option value="friend">Friend</option>
-  <option value="instagram">Instagram</option>
-  <option value="twitter">Twitter</option>
-  <option value="duh">The stars told me, duh!</option>
-  <option value="other">Other</option>
-</select>
-  </div>
- </div>
 
-<!-- Button to submit form and concirmation message-->
+  <!-- Availability Section -->
+  <div class="card m-3 col-sm-6 text-left mx-auto bg-dark text-white">
+    <div class="card-header text-center">Availability for Meetings</div>
+    <div class="card-body">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="monday" name="monday" value="monday" checked>
+        <label class="form-check-label" for="monday">Monday</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="wednesday" name="wednesday" value="wednesday">
+        <label class="form-check-label" for="wednesday">Wednesday</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="friday" name="friday" value="friday">
+        <label class="form-check-label" for="friday">Friday</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Referral Section -->
+  <div class="card m-3 col-sm-6 text-center mx-auto bg-dark text-white"style="background-color: rgba(78, 67, 86, 0.7);">
+    <div class="card-header">How did you hear about us?</div>
+    <div class="card-body">
+      <select name="source" id="source">
+        <option value="searchEngine">Search Engine</option>
+        <option value="friend">Friend</option>
+        <option value="socialMedia">Social Media</option>
+        <option value="event">Event</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Submission Button -->
   <div class="offset-md-2 col-md-8 mx-auto text-center">
-    <input type="submit" id="submitBtn" class="btn btn-info text-white btn-outline-light btn-lg text-center mx-auto" value="Submit">
-    
+    <input type="submit" id="submitBtn" class="btn btn-info text-white btn-outline-light btn-lg text-center mx-auto" value="Register">
     <p id="confirmMsg"></p>
   </div>
-  
-<!--The footer at the bottom of the page-->
-     <div class="mt-5 p-2 text-white text-center" style="background-color:#533A66">
-      <p><a href="https://github.com/aalluhaybi1" target="_blank" style="text-decoration:none; color:white"><i class=" bi bi-person-badge-fill"></i> Ayman Alluhaybi</a> | <a href="https://github.com/aalluhaybi1/Hotel-Lab
-        " target="_blank" style="text-decoration:none; color:white"> <i class=" bi bi-file-earmark-code"></i> India Lab Code</a> | <a href="https://gist.github.com/barrycumbie/892372aa45634b0a28b7354ea076bac6" target="_blank" style="text-decoration:none; color:white"><i class=" bi bi-list-nested"></i> CIS 376-01</a></p>
+  <!-- Modal -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmationModalLabel">Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="confirmationMessage"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
     </div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script><script  src="./script.js"></script>
+  </div>
+</div>
 
+
+  <!-- Footer -->
+  <div class="mt-5 p-2 text-white text-center" style="background-color: rgba(78, 67, 86, 0.9);">
+    <p><a href="https://github.com/aalluhaybi1" target="_blank" style="text-decoration:none; color:white">Ayman Alluhaybi</a> | <a href="https://github.com/aalluhaybi1/India-Lab" target="_blank" style="text-decoration:none; color:white"> Club's Code</a> | <a href="https://gist.github.com/barrycumbie/94d7c36ba2e18b02aeba969aa6078f23" target="_blank" style="text-decoration:none; color:white">CIS 376-01</a></p>
+  </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script>
+<script  src="./scripts/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+/*background styling for webpage*/
+body{
+background-image: url("");
+}
+
+#confirmMsg {
+  color:rgb(48, 42, 42);
+  font-size:25px
+}
