@@ -1,0 +1,10 @@
+/*background styling for webpage*/
+body{
+background-image: url("https://c4.wallpaperflare.com/wallpaper/817/625/70/digital-art-clouds-shooting-stars-night-wallpaper-preview.jpg");
+}
+
+/* styling for confirmation mesage */
+#confirmMsg {
+  color:white;
+  font-size:25px
+}
